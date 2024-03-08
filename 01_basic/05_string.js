@@ -22,7 +22,7 @@ console.log(gameName.indexOf('u'));
 
 
 // last value is not include in the substring method 
-const newString =    gameName.substring(0,2);
+const newString = gameName.substring(0,2);
 console.log(newString);
 
 const anotherString = gameName.slice(-2,4);
