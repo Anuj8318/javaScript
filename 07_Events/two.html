@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Anuj kumar singh</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+
+// <<<<<<<<<<<<<<< WE STUDY ABOUT THE setTimeout >>>>>>>>>>>>>>>>>>>>>
+    // this is the one mthod that how we can write the code 
+    // setTimeout(function(){
+    //     console.log("anuj");
+    // },2000)
+
+    // this is the another method
+  const sayAnuj = function()
+  {
+    console.log('My name is anuj');
+  }
+  const changeText = function()
+  {
+    document.querySelector('h1').innerHTML = "hey there anuj singh"
+  }
+   const changeMe=   setTimeout(changeText,2000);
+
+
+    // <<<<<<<<<<<<<<<<<<< clearTimeout >>>>>>>>>>>>>>>
+    document.querySelector("#stop").addEventListener('click',()=>{
+        clearTimeout(changeMe);
+        console.log("Stop the tiemout");
+    })
+</script>
+</html>

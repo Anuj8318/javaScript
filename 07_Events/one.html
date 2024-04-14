@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hTML eVvnets</title>
+</head>
+<body style="background-color: #4141;">
+    <h1>Amazing imgaes</h1>
+    <div>
+        <ul id="images">
+            <li ><img src="./images/hans-jurgen-mager-Fbdr6gXJBVY-unsplash.jpg" width="200px" id="photoshop" alt="photoshop" ></li>
+            <li ><img src="./images/laura-college-K_Na5gCmh38-unsplash.jpg" width="200px" id="japan"  ></li>
+            <li ><img src="./images/ray-hennessy-xUUZcpQlqpM-unsplash.jpg" width="200px" id="fox"  ></li>
+            <li ><img src="./images/tadeusz-lakota-iwFbKbfPGNk-unsplash.jpg" width="200px" id="ani" ></li>
+           <li> <a style="color: rgb(36, 36, 37);" href="https://goggle.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // this is not the good practice for the events in nowdays 
+    // document.getElementById('fox').onclick = function()
+    // {
+    //     alert("fox ")
+    // }
+
+
+    
+    //attachtEvent()
+    // JQuery= on
+    
+        // These are the events that will be handon by you 
+    
+        // type , timestamp, defaultPrevented
+        // target,toElement, srcElement, currentTarget
+        // clientX,clientY, screenX,screenY
+        // altkey,ctrlkey,shiftKey,keyCode
+    
+
+    // Events ka khel hai bubbling up 
+    // false hota hai bubbling ke liye aur true hota hai capturing ke liye
+    document.getElementById('images').addEventListener('click',(e)=>{
+    //    console.log("clicked inside the ul");
+    },false)
+
+    document.getElementById('fox').addEventListener('click',(e)=>{
+    //    console.log("fox cliked");
+    },false) 
+    
+  // check this 
+  document.getElementById('google').addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log("Google is clicked");
+    }, false);
+
+
+// Task is to when we click on this images then all are just vanshied 
+
+
+document.querySelector('#images').addEventListener('click', function(e) {
+        e.target.style.display = 'none';
+    }, false);
+
+</script>
+</html>

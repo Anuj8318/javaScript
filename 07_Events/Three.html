@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Anuj kumar singh</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // <<<<<<<<<<<<<<<<< setTimeinterval >>>>>>>>>>>>>>>
+    const satDate = function(str){   
+    console.log(str,Date.now());
+
+}
+  const satDate2 =document.querySelector("#start").addEventListener("click",()=>{
+      setInterval(satDate,1000,"hi")
+
+})
+
+// <<<<<<<<<<<<<<<<<<<< clearInterval >>>>>>>>>>>>>>>
+document.querySelector("#stop").addEventListener("click",()=>{
+
+    clearInterval(satDate2)
+})
+ 
+</script>
+</html>
